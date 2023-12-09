@@ -36,6 +36,24 @@ ResourceDeletion
 
 You can tune configuration in the SelfNodeRemdiationConfig, but do not forget : 
 
+       apiVersion: self-node-remediation.medik8s.io/v1alpha1
+       kind: SelfNodeRemediationConfig
+       metadata:
+         name: self-node-remediation-config
+         namespace: openshift-operators
+       spec:
+         apiServerTimeout: 5s
+         peerApiServerTimeout: 5s
+         isSoftwareRebootEnabled: true
+         watchdogFilePath: /dev/watchdog
+         peerDialTimeout: 5s
+         peerUpdateInterval: 15m
+         apiCheckInterval: 15s
+         peerRequestTimeout: 5s
+         safeTimeToAssumeNodeRebootedSeconds: 180
+         maxApiErrorThreshold: 3
+  
+
   * If the node is not down, a reboot will be started by a daemonset/pod on the node
   * You won't be allowed to go under around 3 minutes of waiting if the node is not rebooting
   * After this verification, the remediation process will started :
