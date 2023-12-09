@@ -10,6 +10,30 @@ Read
   * It does not have a built-in fencing or remediation system and so must be configured with an external system that provides such features. 
   * By default, it is configured to utilize the Self Node Remediation system.
 
+
+         apiVersion: remediation.medik8s.io/v1alpha1
+         kind: NodeHealthCheck
+         metadata:
+           name: nhc-worker-default
+         spec:
+           minHealthy: 51%
+           remediationTemplate:
+             apiVersion: self-node-remediation.medik8s.io/v1alpha1
+             kind: SelfNodeRemediationTemplate
+             name: self-node-remediation-resource-deletion-template
+             namespace: openshift-operators
+           selector:
+             matchExpressions:
+               - key: node-role.kubernetes.io/worker
+                 operator: Exists
+           unhealthyConditions:
+             - duration: 30s
+               status: 'False'
+               type: Ready
+             - duration: 30s
+               status: Unknown
+               type: Ready
+               
 ## Self Node Remediation
 
   * The Self Node Remediation Operator is an Red Hat OpenShift add-on operator which implements an external system of fencing and remediation that reboots unhealthy nodes and deletes resources, such as, Pods and VolumeAttachments. 
