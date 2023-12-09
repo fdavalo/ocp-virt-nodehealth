@@ -1,0 +1,16 @@
+apiVersion: self-node-remediation.medik8s.io/v1alpha1
+kind: SelfNodeRemediationConfig
+metadata:
+  name: self-node-remediation-config
+  namespace: openshift-operators
+spec:
+  apiServerTimeout: 5s
+  peerApiServerTimeout: 5s
+  isSoftwareRebootEnabled: false
+  watchdogFilePath: /dev/watchdog
+  peerDialTimeout: 5s
+  peerUpdateInterval: 15m
+  apiCheckInterval: 15s
+  peerRequestTimeout: 5s
+  safeTimeToAssumeNodeRebootedSeconds: 180
+  maxApiErrorThreshold: 3
