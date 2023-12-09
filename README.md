@@ -20,6 +20,16 @@ Read
 
 First install the Operator and specify a SelfNodeRemediationTemplate with the appropriate remediation type (resourcedeletetion is a good default)
 
+     apiVersion: self-node-remediation.medik8s.io/v1alpha1
+     kind: SelfNodeRemediationTemplate
+     metadata:
+       name: self-node-remediation-resource-deletion-template
+       namespace: openshift-operators
+     spec:
+       template:
+         spec:
+           remediationStrategy: ResourceDeletion
+      
 ResourceDeletion
   * This remediation strategy removes the pods and associated volume attachments on the node, rather than the removal of the node object. 
   * This strategy recovers workloads faster. ResourceDeletion is the default remediation strategy.
