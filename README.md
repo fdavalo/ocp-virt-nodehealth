@@ -1,6 +1,8 @@
 # How to handle issues on nodes for Openshift Virtualization and the impact on its Virtual Machines
 
-https://access.redhat.com/documentation/en-us/workload_availability_for_red_hat_openshift/23.2/html-single/remediation_fencing_and_maintenance/index?extIdCarryOver=true&sc_cid=701f2000001Css5AAC#about-remediation-fencing-maintenance
+Read 
+  * https://access.redhat.com/documentation/en-us/workload_availability_for_red_hat_openshift/23.2/html-single/remediation_fencing_and_maintenance/index?extIdCarryOver=true&sc_cid=701f2000001Css5AAC#about-remediation-fencing-maintenance
+  * https://www.medik8s.io/
 
 ## Node Health Check
 
