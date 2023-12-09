@@ -6,7 +6,7 @@ metadata:
 spec:
   apiServerTimeout: 5s
   peerApiServerTimeout: 5s
-  isSoftwareRebootEnabled: false
+  isSoftwareRebootEnabled: true
   watchdogFilePath: /dev/watchdog
   peerDialTimeout: 5s
   peerUpdateInterval: 15m
