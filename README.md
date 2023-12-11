@@ -3,6 +3,7 @@
 Read 
   * https://access.redhat.com/documentation/en-us/workload_availability_for_red_hat_openshift/23.2/html-single/remediation_fencing_and_maintenance/index?extIdCarryOver=true&sc_cid=701f2000001Css5AAC#about-remediation-fencing-maintenance
   * https://www.medik8s.io/
+  * https://www.redhat.com/fr/blog/keeping-virtual-machines-available-by-allowing-nodes-to-self-repair?channel=/fr/blog/channel/red-hat-openshift
 
 ## Node Health Check
 
